@@ -6,3 +6,7 @@ layout: base.njk
 <div class="container">
         <h1>We bring the latest updates from the World</h1>
     </div>
+
+{% for item in news %}
+<a href="/{{item.country}}">{{item.country}}</a>
+{% endfor %}
