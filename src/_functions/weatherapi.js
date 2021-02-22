@@ -4,6 +4,8 @@ const axios = require('axios');
      const {lat,lon}= event.queryStringParameters;
      
      const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${process.env.WEATHER_API_KEY}&units=metric`;
+
+     console.log("url",url);
      
      const response = await axios.get(url);
      callback(null,{
