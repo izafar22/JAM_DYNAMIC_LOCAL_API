@@ -7,4 +7,4 @@ const vibes = [
 
 var vibe = vibes[Math.floor(Math.random() * vibes.length)];
 
-document.querySelector('.vibe').append(vibe);
+//document.querySelector('.vibe').append(vibe);
