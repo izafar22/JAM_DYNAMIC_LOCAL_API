@@ -4,6 +4,7 @@ let gql = require('@apollo-boost').gql;
 const uri = "https://d1wpvizvsyhfhp.cloudfront.net/cms/read/en-US";
 exports.handler = async function(event, context, callback) {
     const client = new ApolloClient({
+        method: "POST",
         uri,
         Authorization: "Bearer a71230612484f77f14bc9621bbd8736da89d0e5fc684abdc"
     });
