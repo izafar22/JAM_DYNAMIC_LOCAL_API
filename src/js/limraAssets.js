@@ -6,4 +6,6 @@ fetch(url)
         return response.json();
     }).then((data) => {
         console.log("the data limra", data);
-    });
+    }).catch((error) => {
+        console.log("error", error);
+    })
