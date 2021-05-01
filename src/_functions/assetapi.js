@@ -1,6 +1,6 @@
 //const fetch = require("node-fetch");
-const ApolloClient = require('@apollo-boost').ApolloClient;
-let gql = require('@apollo-boost').gql;
+const ApolloClient = require('apollo-boost').ApolloClient;
+let gql = require('apollo-boost').gql;
 const uri = "https://d1wpvizvsyhfhp.cloudfront.net/cms/read/en-US";
 exports.handler = async function(event, context, callback) {
     const client = new ApolloClient({
