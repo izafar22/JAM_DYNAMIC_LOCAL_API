@@ -4,6 +4,6 @@ fetch(url)
     .then((response) => {
         console.log("response", response);
         return response.json();
-    }).then(data => {
+    }).then((data) => {
         console.log("the data limra", data);
-    })
+    });
