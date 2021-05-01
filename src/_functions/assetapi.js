@@ -19,6 +19,7 @@ exports.handler = async function(event, context, callback) {
         }),
     });
 
+    console.log("the limra response", JSON.stringify(response));
     if (response.errors) {
         callback(response.errors);
     }
