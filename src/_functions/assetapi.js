@@ -22,9 +22,22 @@ exports.handler = async function(event, context, callback) {
                 'Content-Type': 'application/json',
                 'Authorization': 'Bearer a71230612484f77f14bc9621bbd8736da89d0e5fc684abdc'
             }
-        }).then(res => res.json())
-        .then(json => console.log(json.data))
-        .catch(err => console.log(err))
+        }).then(res => {
+            callback(null, {
+                statusCode: 200,
+                body: JSON.stringify(res.data)
+            })
+        })
+        .catch(err => {
+            console.log(err)
+            callback(err, {
+                statusCode: 500,
+                body: JSON.stringify({
+                    "message": "Bad request"
+                })
+            });
+        })
+
 
 
 
